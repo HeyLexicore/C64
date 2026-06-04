@@ -5,7 +5,7 @@ CXX := g++
 TARGET := out 
 
 # Source and Object files
-SRC := main.cpp MOS6502.cpp C64.cpp 
+SRC := main.cpp MOS6502.cpp C64.cpp BUS.cpp Debug.cpp
 OBJ := $(SRC:.cpp=.o)
 
 # Compiler flags
@@ -33,7 +33,7 @@ run: all
 	./out kernal.901227-02.bin basic.901226-01.bin
 
 edit:
-	nvim Main.cpp *.cpp *.h 
+	nvim main.cpp *.cpp *.h *.hpp 
 
 clean:
 	rm -f $(TARGET) $(OBJ)
